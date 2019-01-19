@@ -21,7 +21,7 @@ class linked_list{
 			head = temp;  //assigning head to the new node created by pointing head towards the same node as temp 
         }
 		// function to display and print the linked list
-		void display(){
+	void display(){
 			node *ptr;  // creating a temp pointer variable ptr
 			ptr = head; // assigning head to ptr
 			while(ptr != NULL){  // checking if the ptr reaches the last node
