@@ -1,4 +1,4 @@
-//program for creating a linked list and displaying it 
+//program for creating a linked list and displaying it,  time complexity is 0(1) for inserting at beginning 
 
 #include <iostream>
 using namespace std;
