@@ -1,3 +1,5 @@
+@author sourav kumar , 22-01-2019 
+
 // program to transpose a array 
 
 #include <iostream>
