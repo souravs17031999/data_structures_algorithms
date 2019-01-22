@@ -1,3 +1,5 @@
+// @author sourav kumar , 20-01-2019
+
 // program for merging two arrays , in 0(n)
 
 #include<iostream>
