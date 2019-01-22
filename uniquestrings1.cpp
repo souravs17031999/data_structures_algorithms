@@ -1,3 +1,8 @@
+// @author sourav kumar , 21-01-2019
+
+//program to check for unique strings
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
