@@ -1,3 +1,5 @@
+// @author sourav kumar , 19-01-2019
+
 // program for removing dupliactes
 
 #include<iostream>
