@@ -1,3 +1,5 @@
+// @author sourav kumar , 20-01-2019
+
 //program for creating a linked list and displaying it,  time complexity is 0(1) for inserting at beginning 
 
 #include <iostream>
