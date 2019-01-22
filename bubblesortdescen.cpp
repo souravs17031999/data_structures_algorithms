@@ -1,3 +1,6 @@
+// @author sourav kumar , 17-01-2019
+
+// program for bubble sort descending order
 #include <iostream>
 using namespace std;
 
