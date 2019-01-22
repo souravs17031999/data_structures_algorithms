@@ -1,3 +1,5 @@
+//@author sourav kumar , 18-01-2019
+
 // program for linked list insertion
 #include <iostream>
 using namespace std; 
@@ -20,7 +22,7 @@ class linked_list{  // making a class for different fucntions
             if(n == 1){    // insertion of node at the beginning n=1 
                 new_node->next = head;  // assigning head address to new_node address 
                 head = new_node; // making new_node as head 
-                return;
+                return;          // returning as no need to do anything further
             }
             node *ptr;  //run if position is other than beginning 
             ptr = head;  // making a temp var so as not to lose the reference head
