@@ -1,3 +1,5 @@
+//@author sourav kumar , 19-01-2019
+
 //program for linear search in c++ , time complexity is 0(n)
 
 #include <iostream>
