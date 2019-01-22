@@ -1,3 +1,6 @@
+//@author sourav kumar , 16-01-2019
+
+// program to insert elements to array 
 #include <iostream>
 using namespace std;
 

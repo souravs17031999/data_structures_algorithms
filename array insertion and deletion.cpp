@@ -1,3 +1,7 @@
+//@author sourav kumar , 16-01-2019
+
+//program menu driven for insertion and deletion in a array
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,5 @@
+//@author sourav kumar , 16-01-2019
+
 //program for binary search , time complexity is O(log n)
 
 #include <iostream>
