@@ -26,7 +26,7 @@ int main(void){
     }
 	// calling array_right_rotate for each time shifting 
     for(int i = 0; i <= k-1; i++){
-        array_right_rotate(arr,n);
+        array_right_rotate(arr, n);
     }
 	// displaying the array 
     for(int i = 0; i <= n-1; i++){
