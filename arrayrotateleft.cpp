@@ -5,7 +5,7 @@ using namespace std;
 
 
 // function for rotating elements one by one 
-void rotate(int arr[], int &n){
+void array_right_rotate(int arr[], int &n){
     int temp = arr[0];   // saving the first element as temp var 
     for(int i = 0; i <= n-2; i++){  // now transversing from first to last shifting each one to the left by one index
         arr[i] = arr[i+1];
