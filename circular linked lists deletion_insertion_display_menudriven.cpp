@@ -1,3 +1,5 @@
+// program for circular lists node deletion from end , insertion and display through menu driven.
+// @author sourav kumar , 02-02-2019
 #include<iostream>
 using namespace std;
 struct node{
