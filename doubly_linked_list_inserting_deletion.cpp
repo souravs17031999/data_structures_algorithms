@@ -1,5 +1,5 @@
 // program for Insertion and deletion of nodes in doubly linked lists
-
+// @author sourav kumar , 08-02-2019
 #include<iostream>
 using namespace std;
 struct node{
