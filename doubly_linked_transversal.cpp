@@ -1,5 +1,5 @@
 // program for creation of doubly linked list and transversal in forward and backward  
-
+// @author sourav kumar , 08-02-2019
 #include<iostream>
 using namespace std;
 struct node{
