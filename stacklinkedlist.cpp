@@ -28,7 +28,7 @@ class stack{
           top = temp;
           return;
       }
-	  // runs when it is not the first stack 
+	// runs when it is not the first stack 
       temp->link = top;
       top = temp;
   }
