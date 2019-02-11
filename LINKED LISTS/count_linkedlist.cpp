@@ -1,3 +1,5 @@
+// program to get the length of linked list 
+// @author sourav kumar , 11-02-2019
 #include<iostream>
 using namespace std;
 struct node{
@@ -9,13 +11,14 @@ class linked_list{
     node *head;
     public:
     linked_list(){head = NULL;}
+    // function to count the number of elements in a linkedlist
     int length(){
         if(head == NULL){
             return 0;
     }
         node *ptr = head;
         int count = 0;
-        while(ptr != NULL){
+        while(ptr != NULL){ // transversung tikl the last node and incrementing coubter by 1 
             count++;
             ptr = ptr->next;
     }
@@ -23,6 +26,7 @@ class linked_list{
         return count;
     
 }
+    // function to implement insertion of node at thr beginning of linked list
     void insert(int n){
         node *new_node = new node;
         new_node->data = n;
