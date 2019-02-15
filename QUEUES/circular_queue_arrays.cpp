@@ -3,7 +3,7 @@
 // logic is same as normal queue , just in this case wherever we need to increment to next index we use i -> (i + 1) % MAX [where earlier we used , i - > i + 1]
 #include <iostream>
 using namespace std;
-#define MAX 10
+#define MAX 1001
 class cir_queue{
     int front;
     int rear;
