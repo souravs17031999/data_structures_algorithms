@@ -32,6 +32,16 @@ class stack{
             
         }
     }
+    // program for displaying the stack
+    void display(){
+        if(top == -1){
+            cout << "empty stack" << endl;
+            return;
+        }
+        for(int i = 0; i <= top; i++){
+            cout << arr[i] << " ";
+        }
+    }
 };
 // main function to call other functions 
 int main(void){
