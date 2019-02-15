@@ -44,8 +44,10 @@ class cir_queue{
             cout << "empty queue" << endl;
             return;
         }
-        for(int i = front; i <= rear; i++){
-            cout << arr[i] << " ";
+        int count = ((rear - front) + MAX) % MAX + 1 
+        for(int i = 0; i < count; i++){
+            int index = (front + i) % MAX
+            cout << arr[index] << " ";
         }
         cout << endl;
     }
