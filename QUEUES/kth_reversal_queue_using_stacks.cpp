@@ -105,7 +105,8 @@ class queue{
 		// pushing the elements of k part of queue to stack 
 		stack s;
 		for(int i = front; i <= k-1; i++){
-		    s.push(arr[i]);
+		    int temp = dequeue();
+		    s.push(temp);
 		}
 		// popping that part of queue from stack and pushing at the end of queue 
 	    for(int i = 0; i <= k-1; i++){
@@ -113,8 +114,8 @@ class queue{
 	        enqueue(a);
 	    }
 		// then popping from head of queue (remaining part of queue) and then pushing to end of queue which maintains the relative order of elements of remaining queue 
-		// incrementing front so that my focus of front to rear is same as required 
-	    front = front + k;
+		// now my front is already incremented till the part i want it to be  
+	    
 	    for(int i = 0; i <= n-k-1; i++){
 	        int a = dequeue();
 	        enqueue(a);
