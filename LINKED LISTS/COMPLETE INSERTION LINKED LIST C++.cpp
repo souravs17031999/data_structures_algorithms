@@ -40,10 +40,10 @@ class linked_list{  // making a class for different fucntions
 int main(void){
     int data,n;
     linked_list a;
-    a.add_node(1,1);
-    a.add_node(2,2);
-    a.add_node(3,1);
-    a.add_node(5,3);
+    a.add_node(1);
+    a.add_node(2);
+    a.add_node(3);
+    a.add_node(5);
     a.display();
-	// output : 3 1 5 2
+	// output : 5 3 2 1
 }
