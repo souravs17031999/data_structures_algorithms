@@ -15,23 +15,18 @@ class linked_list{  // making a class for different fucntions
         head  = NULL;  // creating a empty linked list with a head node pointing towards nothing 
     }
 		//function to create and insert the nodes at nth position
-        void add_node(int data, int n){
-            node *new_node = new node;  // creation of new node
-            new_node->data = data;  // assigning value to new node
-            new_node->next = NULL; // assigning new node pointer towards nothing
-            if(n == 1){    // insertion of node at the beginning n=1 
-                new_node->next = head;  // assigning head address to new_node address 
-                head = new_node; // making new_node as head 
-                return;          // returning as no need to do anything further
-            }
-            node *ptr;  //run if position is other than beginning 
-            ptr = head;  // making a temp var so as not to lose the reference head
-            for(int i = 0; i <= n-3; i++){  // run the loop n-3 times so to keep the ptr till n-1 position 
-                ptr = ptr->next;  // assigning the next address to ptr
-            }
-            new_node->next = ptr->next;  // linking the new_node to next node 
-            ptr->next = new_node;  // linking the n-1th node to new_node
-        }
+        void add_node(int n){
+        node *new_node = new node;
+        new_node->data = n;
+        new_node->next = NULL;
+        if(head == NULL){
+           head = new_node;
+            return;
+    }
+        node *ptr = head;
+        new_node->next = head;
+        head = new_node;
+}
 	// function to display the linked list	
     void display(){
         node *ptr;
@@ -45,10 +40,10 @@ class linked_list{  // making a class for different fucntions
 int main(void){
     int data,n;
     linked_list a;
-    a.add_node(1,1);
-    a.add_node(2,2);
-    a.add_node(3,1);
-    a.add_node(5,3);
+    a.add_node(1);
+    a.add_node(2);
+    a.add_node(3);
+    a.add_node(5);
     a.display();
-	// output : 3 1 5 2
+	// output : 5 3 2 1
 }
