@@ -66,7 +66,7 @@ int main(){
     l.display();
     l.middle_list();
 }
-
+// another way to accomplish this but inefficient way
 /* #include<iostream>
 using namespace std;
 struct node{
