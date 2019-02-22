@@ -73,7 +73,7 @@ class stack{
               push_stack(s[i]);
             
               }
-		  // now there should be nothing in the stack 	  
+		  // now the stack should no longer be empty 	  
           if (s.empty()) 
              flag++;      
 		 // if there is right parenthesis , then check for individually each type of parenthesis 
