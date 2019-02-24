@@ -39,3 +39,47 @@ int main(void){
 	  insert(&head,2);
 	  display(&head);
 }
+/*
+another better way to handle it if we not pass address of head and rather pass reference of head -
+
+#include <iostream>
+using namespace std; 
+struct node{  
+    int data;
+    node *next;
+};
+void insert(node *&head, int n){
+node *new_node = new node;
+new_node->data = n;
+new_node->next = NULL;
+    if(head == NULL){
+       head = new_node;
+        return;
+    }
+new_node->next = head;    
+head = new_node;
+}
+// passing address of head pointer 		
+void display(node *&head){
+    node *ptr = head; // assinging address which  head pointer stored to ptr pointer 
+    if(head == NULL){
+        cout << "empty" << endl;
+        return;
+        
+    }
+    while(ptr != NULL){
+        cout << ptr->data << " ";
+        ptr = ptr->next;
+        }
+}
+
+int main(void){
+	  // initializing head pointer to NULL 
+      node *head = NULL;
+	  insert(head,1);  // we are passing reference of head pointer  
+	  insert(head,2);
+	  display(head);
+}
+
+
+*/
