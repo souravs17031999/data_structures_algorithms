@@ -2,8 +2,41 @@
 // @author sourav kumar , 26-01-2019
 #include <iostream>
 using namespace std;
-
-
+// solution for O(n) , n is the length of array 
+void array_left_rotate(int arr[], int n, int k){
+    int temp[k];
+    for(int i = 0; i <= k-1; i++){
+        temp[i] = arr[i];
+    }
+    for(int i = 0; i <= n-k-1; i++){
+        arr[i] = arr[i+k];
+        
+    }
+    int count = n-k;
+    for(int i = 0; i <= k-1; i++){
+        arr[count] = temp[i];
+        count++;
+    }    
+}
+int main() {
+	int t,size,k;
+	cin >> t;
+	while(t--){
+	    cin >> size >> k;
+	    int arr[size];
+	    for(int i = 0; i <= size - 1; i++){
+	        cin >> arr[i];
+	    }
+	    array_left_rotate(arr,size,k);
+	    for(int i = 0; i <= size-1; i++){
+	        cout << arr[i] << " ";
+	    }
+	    cout << endl;
+	}
+	return 0;
+}
+// solution is for O(n*d) where n is length of array and d is the no of elements to be rotated
+/*
 // function for rotating elements one by one 
 void array_right_rotate(int arr[], int &n){
     int temp = arr[0];   // saving the first element as temp var 
@@ -34,3 +67,4 @@ int main(void){
     }
 	
 }
+*/
