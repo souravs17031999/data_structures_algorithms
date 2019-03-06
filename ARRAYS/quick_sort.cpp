@@ -1,5 +1,6 @@
 // program for quick sort using arrays 
 // @ author sourav kumar , 06-03-2019
+// time complexity in worst case is O( n * n ) where n is length of array , average case is more often looked - O( n * lg(n) ) 
 #include <iostream>
 using namespace std;
 // function to partition the array in such a way so that all the elements smaller than pivot are left to it , and greater are right to it (order doesn't matter)
