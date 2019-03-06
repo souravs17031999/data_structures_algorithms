@@ -2,6 +2,7 @@
 /* logic is to simply first maintain a count array for keeping the occurence of each of the character in the array and then now the index of the count array is already
    already sorted. Then , we need to transverse this array and copy the index values as no of times as the value it contains at its index into some another array 
    which will be sorted as we will finish transversing the count array  */
+// time complexity is O( n + k ) where n is the length of original array and k is the length of temp count array 
 // @author sourav kumar , 06-03-2019   
 #include <iostream>
 using namespace std;
