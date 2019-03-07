@@ -42,8 +42,9 @@ class queue{
      }
 	 // if the deleted node is the very last and only node in the queue 
      if(front == rear){
+	 int p = front->data;
          front = rear = NULL;
-         return 0;
+         return p;
      }
 	 // otherwise simply increment the front pointer by pointing to the next node (after the node to be dequeued)
      node *ptr = front;
