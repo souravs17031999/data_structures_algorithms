@@ -1,4 +1,5 @@
 // program for creating two new linked lists of which nodes are to be sum of odd and even postitions respectively taken from a already created singly linked list
+// @author sourav kumar, 17-03-2019
 #include <iostream>
 using namespace std;
 // structure for node 
