@@ -49,7 +49,7 @@ class linked_list{
 		    node *fast = head->next;
 		    node *slow = head;
 			// transversing whole linked list 
-		    while(fast != NULL && slow != NULL){
+		    while(fast != NULL && slow != NULL && fast->next != NULL){
 				// when fast and slow are pointing to the same address 
 		        if(fast == slow){
 		            cout << "loop detected" << endl;
