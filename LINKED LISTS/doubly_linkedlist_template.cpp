@@ -78,12 +78,5 @@ class doubly_linked_list{
 };
 
 int main(){
-    node *head1 = NULL;
-    doubly_linked_list l;
-    for(int i = 1; i <= 5; i++){
-        l.insertion(head1, i);
-    }
-    l.display(head1);
-    l.deletion(head1, 4);
-    l.display(head1);
+    
 }
