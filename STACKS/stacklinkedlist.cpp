@@ -42,6 +42,18 @@ class stack{
       top = temp->link;
       delete temp;  // destroying the first node from stack 
   }
+  int tops(){
+      if(top == NULL){
+          return -1;
+      }
+      return top->data;
+  }
+   bool isempty(){
+      if(top == NULL){
+          return 1;
+      }
+      return 0;
+  }
   // fucntion to display all the elements of the stack 
   void display(){
       if(top == NULL){   // checking for empty stack as in that case top points to NULL 
