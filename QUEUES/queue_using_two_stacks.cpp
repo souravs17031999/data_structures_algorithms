@@ -94,10 +94,20 @@ class queue{
         s2.pop();
         return x;
     }
+    int getfront(){
+        if(s2.empty()){
+            while(!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+        }
+        return s2.top();
+    }
     void display(){
         s1.display();
         s2.display();
     }
+    
 };
 int main(){
     queue q;
