@@ -1,5 +1,6 @@
 // program for implementing binary search through recursive approach (divide and conquer technique)
-// time complexity is 0(n*log(n))
+// time complexity is 0(log(n))
+// T(n) = T(n/2) + c   (recurrence equation)
 // @author sourav kumar, 24-03-2019
 #include <iostream>
 using namespace std;
