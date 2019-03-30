@@ -1,3 +1,7 @@
+// program for implementing horners method for evaluating polynomial
+// horners method is based on the idea that the polynomial can be evaluated by 
+// simulataneously multiplying x with old value of y and then adding it with new given coeff
+ // @author sourav kumar   , 30 
 #include<iostream>
 using namespace std;
 int main()
