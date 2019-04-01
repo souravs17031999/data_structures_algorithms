@@ -1,6 +1,7 @@
 // program is to implement deletion of a given pointer to node without head pointer reference
 /* logic is that the simple idea about the location of next node to the node which is to be deleted
 , now we can simply copy the next node data to the current pointer given to us and delete next pointer.*/
+// time complexity is O(n) where n is no of nodes in the given linked list
 // @author sourav kumar , 01-04-2019
 #include<iostream>
 using namespace std;
