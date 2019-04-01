@@ -40,3 +40,6 @@ class linked_list{
 			cout << "NULL" << endl;
 			}
 };			
+int main(void){
+    return 0;
+}
