@@ -46,7 +46,7 @@ class linked_list{
 		// detect the loop 	
 		void detect_loop(node *&head){
 			// setting two pointers fast and slow , fast moving two nodes and slow moving one node 
-		    node *fast = head->next;
+		    node *fast = head->next;  // setting it to next of head because inside while loop "if" condition will be true for the very first time only 
 		    node *slow = head;
 			// transversing whole linked list 
 		    while(fast != NULL && slow != NULL && fast->next != NULL){
