@@ -1,4 +1,5 @@
 // program for implementing priority queue using singly linked list 
+// priority is in decreasing order of ascending numbers 0, 1, 2, .... meaning 0 is higher priority than 1.
 // @author sourav kumar , 23-02-2019
 #include <iostream>
 using namespace std;
