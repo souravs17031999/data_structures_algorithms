@@ -1,3 +1,6 @@
+// program for implementing depth first transversal in a binary search tree 
+// time compelxity is O(n) where n is no of nodes 
+// @author sourav kumar , 08-04-2019
 #include<iostream>
 using namespace std;
 class node{
