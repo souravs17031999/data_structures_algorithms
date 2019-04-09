@@ -1,3 +1,5 @@
+// all the functions implemented for binary search tree
+// @author sourav kumar , 09-04-2019
 #include <bits/stdc++.h>
 using namespace std;
 // class structure for node 
