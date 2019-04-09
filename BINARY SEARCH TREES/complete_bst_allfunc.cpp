@@ -3,7 +3,7 @@ using namespace std;
 // class structure for node 
 class node{
     public:
-        char data;
+        int data;
         node *left;
         node *right;
         node(int x){
@@ -17,7 +17,7 @@ class binarytree{
     public:
 		// function for inserting a new node in bst 
 		// logic is that new node is always inserted after a leaf node 
-        node* insert(node *&root, char data){
+        node* insert(node *&root, int data){
             // recursive approach (more intuitive)
             if(root == NULL){
                 node *new_node = new node(data);
@@ -50,12 +50,12 @@ class binarytree{
         }
 		// function for finding minimum in a bst
 		// logic is that in a bst , the minimum node will be the leftmost node in a bst and so keep transversing till the left of the leftmost node becomes NULL 
-        int findmin(node *&root){
+        node* findmin(node *&root){
             node *ptr = root;
             while(ptr->left != NULL){
                 ptr = ptr->left;
             }
-            return ptr->data;
+            return ptr;
         }
 		
 		// function for finding maximum in a bst
@@ -115,33 +115,82 @@ class binarytree{
 		    queue <node *> q;    // using stl container for queue of pointer type 
 		    q.push(root);    
 		    while(!q.empty()){              
-		        node *temp = q.front();     // calling the front of queue 
-		        cout << temp->data << " ";  // printing the data of the node at current 
+		        node *temp = q.front();     // calling the front of queue
+		        cout << temp->data << " ";  // printing the data of the node at current
+		        q.pop();
 		        if(temp->left != NULL){     // checking if left child exist or not , if yes , then push that to the end of queue 
 		            q.push(temp->left);
 		        }
 		        if(temp->right != NULL){   // checking if right child exist or not , if yes , then push that to the end of queue 
 		            q.push(temp->right);
 		        }
-		        q.pop();                  // popping the front of queue 
+		                          // popping the front of queue 
 		    }
+		} 
+		// function for deletion of node of bst 
+		/* first of all , we need to find the node in the bst and then delete it. If it is the leaf node , then simply locate it and delete it . If it has only one child , 
+		then locate it and directly link its child to its parent and then delete the node. If it has both children exitsing , then we need to find the min from its right subtree and then replace it with that min value.
+		This ensures that no property of bst is voilated , as it is the right one so it is greater than its left subtree , and it is minimum then it is already lesser than its right subtree.
+		We can also select max from left subtree of the node to be deleted.
+		*/
+		node* deletion(node *&root, int data){
+		    // it bst is empty 
+		    if(root == NULL){
+		        return root;
+		    }
+		    // searching for left side of root in the bst 
+		    if(data < root->data){
+		        root->left = deletion(root->left, data);
+		    }
+		    // searching for right side of root in the bst 
+		    else if(data > root->data){
+		        root->right = deletion(root->right, data);
+		    }
+		    // the node is found 
+		    else{
+		        // if no child exits 
+		        if(root->left == NULL && root->right == NULL){
+		            delete root;
+		            root = NULL;
+		        }
+		        // if only left child exists 
+		        else if(root->left == NULL){
+		            node *temp = root;
+		            root  = root->right;
+		            delete temp;
+		        }
+		        // if only right child exists 
+		        else if(root->right == NULL){
+		            node *temp = root;
+		            root  = root->left;
+		            delete temp;
+		        }
+		        else{
+		        // if both of child exits       
+		            node *temp = findmin(root->right);  // finding minimum from right subtree of the node to be deleted 
+		            root->data = temp->data;     // replacing its data with the min value found 
+		            root->right = deletion(root->right, temp->data);   // deleting the deplicate value node  
+		        }
+		    }
+		    return root;
 		}
-		
+		string isempty(node *&root){
+		    if(root == NULL){
+		        return "YES";
+		    }
+		    return "NO";
+		}
 		
 };	
 int main(){
 	binarytree b;
 	node *root = NULL;
-	b.insert(root, 'F');
-	b.insert(root, 'D');
-	b.insert(root, 'J');
-	b.insert(root, 'B');
-	b.insert(root, 'E');
-	b.insert(root, 'G');
-	b.insert(root, 'K');
-	b.insert(root, 'A');
-	b.insert(root, 'C');
-	b.insert(root, 'I');
-	b.insert(root, 'H');
-	b.levelorder(root);
+	b.insert(root, 1);
+	b.insert(root, 2);
+	b.insert(root, 3);
+	b.insert(root, 4);
+	b.insert(root, 5);
+	b.deletion(root, 3);
+    cout << b.search(root, 3);  // not found 
+    
 }
