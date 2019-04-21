@@ -1,4 +1,5 @@
 // program to implement heaps using arrays and implementing heap sort using arrays 
+// heap sort is an in-place sorting algorithm
 // overall time complexity of heap sort is 0(n*lg(n))
 // time complexity of max_heapify is 0(log(n))
 // time complexity of build_max_heapify is 0(n*lg(n))
