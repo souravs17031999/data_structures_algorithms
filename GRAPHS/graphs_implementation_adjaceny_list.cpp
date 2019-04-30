@@ -120,8 +120,8 @@ class graph{
         }
 		// function for removing undirected edge (vertex) 
 		void removeundirectededge(int u, int v){
-            removedirectededge(u, v);
-            removedirectededge(v, u);
+            removeedge(u, v);
+            removeedge(v, u);
         }
 };
 int main(void){
