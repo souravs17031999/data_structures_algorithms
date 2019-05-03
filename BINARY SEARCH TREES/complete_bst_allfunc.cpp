@@ -191,6 +191,20 @@ class binarytree{
             	cout <<  root->data + sum(root->left) + sum(root->right);
             
         	}
+		// function for finding least common ancestros
+		
+		node* lca(node *&root, int n1, int n2){
+            		if(root == NULL){
+                	return root;
+            	}
+            	if(root->data < n1 && root->data < n2){
+                	return lca(root->right, n1, n2);
+            	}
+            	else if(root->data > n1 && root->data > n2){
+                	return lca(root->left, n1, n2);
+            	}
+            	return root;
+        	}
 		
 };	
 int main(){
