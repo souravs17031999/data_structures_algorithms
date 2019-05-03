@@ -155,13 +155,13 @@ class binarytree{
 		            delete root;
 		            root = NULL;
 		        }
-		        // if only left child exists 
+		        // if only right child exists 
 		        else if(root->left == NULL){
 		            node *temp = root;
 		            root  = root->right;
 		            delete temp;
 		        }
-		        // if only right child exists 
+		        // if only left child exists 
 		        else if(root->right == NULL){
 		            node *temp = root;
 		            root  = root->left;
@@ -176,12 +176,14 @@ class binarytree{
 		    }
 		    return root;
 		}
+		// function for checking if bst is empty or not
 		string isempty(node *&root){
 		    if(root == NULL){
 		        return "YES";
 		    }
 		    return "NO";
 		}
+		// function for calculating sum of all nodes in a bst
 		int sum(node *&root){
             	if(root == NULL){
                 	return 0;
