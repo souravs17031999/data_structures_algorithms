@@ -182,6 +182,13 @@ class binarytree{
 		    }
 		    return "NO";
 		}
+		int sum(node *&root){
+            	if(root == NULL){
+                	return 0;
+            	}
+            	cout <<  root->data + sum(root->left) + sum(root->right);
+            
+        	}
 		
 };	
 int main(){
@@ -192,7 +199,7 @@ int main(){
 	b.insert(root, 3);
 	b.insert(root, 4);
 	b.insert(root, 5);
-	b.deletion(root, 3);
-    cout << b.search(root, 3);  // not found 
-    
+	//b.deletion(root, 3);
+        //cout << b.search(root, 3);  // not found 
+    	// b.sum(root);  // 15
 }
